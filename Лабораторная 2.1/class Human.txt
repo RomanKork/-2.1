@@ -1,0 +1,28 @@
+﻿class Human{
+    public bool Less30YO { get; set; }
+    public bool IsInRussia { get; set; }
+    public Human()
+    {
+        Less30YO = false;
+        IsInRussia = false;
+    }
+    public Human(bool x, bool y)
+    {
+        Less30YO = x;
+        IsInRussia = y;
+    }
+    public Human(Human OtherHuman)
+    {
+        Less30YO = OtherHuman.Less30YO;
+        IsInRussia = OtherHuman.IsInRussia;
+    }
+    public void MirrorHuman()
+    {
+        Less30YO = !Less30YO;
+        IsInRussia = !IsInRussia;
+    }
+    public override string ToString()
+    {
+        return $"Less30YO: {Less30YO}, IsInRussia: {IsInRussia} ";
+    }
+}
